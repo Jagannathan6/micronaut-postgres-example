@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: micronaut-postgres-example
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres?ssl=false
+    driverClassName: org.postgresql.Driver
+    username: xxxx
+    password: xxxx
+    dialect: POSTGRES
+jpa:
+  default:
+    properties:
+      hibernate:
+        show_sql: true
+        hbm2ddl:
+            auto: update
+    entity-scan:
+      packages: 'micronaut.postgres.example'
